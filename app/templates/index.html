@@ -4,59 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Restaurant Dashboard</title>
+  
+  <!-- ✅ Favicon -->
+  <link rel="icon" href="{{ url_for('static', filename='fg_favicon.ico') }}" type="image/x-icon">
+  
+  <!-- ✅ Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background: #f7f7f7;
-    }
-    .app-card {
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      border-radius: 1rem;
-      padding: 2rem;
-      background: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .app-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-    .icon {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      color: #0d6efd;
-    }
-  </style>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
-<body>
-  <div class="container py-5">
-    <h1 class="text-center mb-4">Restaurant Dashboard</h1>
-    <div class="row row-cols-1 row-cols-md-2 g-4">
+<body class="bg-light">
 
-      <div class="col">
-        <a href="https://restaurant-reservation-flask-update.onrender.com" class="text-decoration-none text-dark">
-          <div class="app-card h-100">
-            <i class="bi bi-calendar-check icon"></i>
-            <h4>Reservation App</h4>
-            <p>View and manage table bookings with ease.</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="col">
-        <a href="https://flask-inventory-app-1a2k.onrender.com" class="text-decoration-none text-dark">
-          <div class="app-card h-100">
-            <i class="bi bi-box-seam icon"></i>
-            <h4>Inventory App</h4>
-            <p>Track ingredients and manage restaurant stock.</p>
-          </div>
-        </a>
-      </div>
-
-      <!-- Future cards can go here -->
-
+  <div class="container text-center py-5">
+    <h1 class="mb-4">🍽️ Restaurant Dashboard</h1>
+    
+    <div class="d-grid gap-3 col-6 mx-auto">
+      <a class="btn btn-primary btn-lg" href="https://restaurant-reservation-flask-update.onrender.com" target="_blank">Reservation App</a>
+      <a class="btn btn-success btn-lg" href="https://flask-inventory-app-1a2k.onrender.com" target="_blank">Inventory App</a>
     </div>
+
+    <!-- ✅ Visitor Counter -->
+    <p class="text-muted mt-4 small">Visitor #: {{ visit_count }}</p>
   </div>
+
+  <!-- ✅ GitHub Footer -->
+  <footer class="text-center mt-5 mb-3 text-muted">
+    <hr>
+    <p>Built with ❤️ by 
+      <a href="https://github.com/migglepiggle/restaurant-dashboard-homepage" target="_blank">migglepiggle</a>
+    </p>
+  </footer>
+
 </body>
 </html>
